@@ -38,7 +38,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
 
 <template>
-  <section class="full-section relative min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center overflow-hidden px-6">
+  <section class="full-section relative w-full h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center overflow-hidden px-6">
     
     <!-- Background building / parallax -->
     <div class="absolute inset-0 overflow-hidden z-0">

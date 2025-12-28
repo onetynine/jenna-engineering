@@ -3,13 +3,14 @@ import { ref } from 'vue'
 import FadeIn from './FadeIn.vue'
 
 const projects = [
-  { title: 'KLCC Tower Elevator', image: 'https://placehold.co/1920x1080?text=KLCC+Tower+Elevator&bg=333&fg=fff' },
-  { title: 'Mid Valley Escalator', image: 'https://placehold.co/1920x1080?text=Mid+Valley+Escalator&bg=333&fg=fff' },
-  { title: 'Petaling Jaya Mall', image: 'https://placehold.co/1920x1080?text=Petaling+Jaya+Mall&bg=333&fg=fff' },
-  { title: 'Johor Bahru Office', image: 'https://placehold.co/1920x1080?text=Johor+Bahru+Office&bg=333&fg=fff' },
-  { title: 'Penang Hotel', image: 'https://placehold.co/1920x1080?text=Penang+Hotel&bg=333&fg=fff' },
-  { title: 'KL Office Tower', image: 'https://placehold.co/1920x1080?text=KL+Office+Tower&bg=333&fg=fff' },
+  { title: 'KLCC Tower Elevator', image: 'https://picsum.photos/1920/1080?random=1' },
+  { title: 'Mid Valley Escalator', image: 'https://picsum.photos/1920/1080?random=2' },
+  { title: 'Petaling Jaya Mall', image: 'https://picsum.photos/1920/1080?random=3' },
+  { title: 'Johor Bahru Office', image: 'https://picsum.photos/1920/1080?random=4' },
+  { title: 'Penang Hotel', image: 'https://picsum.photos/1920/1080?random=5' },
+  { title: 'KL Office Tower', image: 'https://picsum.photos/1920/1080?random=6' },
 ]
+
 
 const selectedIndex = ref(0)
 const previewImage = ref(projects[selectedIndex.value].image)
@@ -41,10 +42,10 @@ function handleClick(index) {
     <div class="absolute inset-0 bg-black/30"></div>
 
     <!-- Right-aligned Itemized Buttons with Text -->
-    <div class="relative z-10 w-full h-full flex flex-col justify-center items-end px-12 md:px-24 gap-6">
+    <div class="relative z-10 w-full h-full flex flex-col justify-center items-end px-12 md:px-12 gap-6">
       <FadeIn>
         <!-- Section Title -->
-        <div class="text-white mb-6 text-right  mt-8">
+        <div class="text-white mb-6 text-right">
           <h2 class="text-4xl md:text-5xl font-bold">Our Notable Projects</h2>
           <p class="mt-2 text-lg md:text-xl text-white/80">
             Some of our completed and ongoing projects that showcase our expertise
@@ -59,7 +60,7 @@ function handleClick(index) {
             @mouseenter="handleMouseEnter(i)"
             @click="handleClick(i)"
             :class="[
-              'px-6 py-3 backdrop-blur-md text-white font-semibold rounded-full shadow-lg transition-all duration-300 text-right',
+              'px-6 py-3 backdrop-blur-md text-white font-semibold rounded-full shadow-lg transition-all duration-100 text-right',
               i === selectedIndex.value
                 ? 'bg-white/70 text-slate-900 scale-110 shadow-xl'
                 : 'bg-white/30 hover:scale-110 hover:bg-white/50'
@@ -76,7 +77,7 @@ function handleClick(index) {
 <style>
 /* Fade transition for preview image */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.7s ease;
+  transition: opacity 0.1s ease;
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;

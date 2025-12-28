@@ -28,7 +28,7 @@ function nextSlide() {
 </script>
 
 <template>
-  <section id="whoweare" class="relative w-full py-24 bg-gray-50 overflow-hidden">
+  <section id="whoweare" class="relative h-screen w-full py-24 bg-gray-50 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
       <!-- Text Content -->
       <div class="md:w-1/2 text-center md:text-left">
